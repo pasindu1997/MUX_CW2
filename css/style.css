@@ -1,0 +1,330 @@
+.header-block-two {
+    float: right;
+    margin-right:20px;
+}
+
+.header-block-one {
+    margin-left:20px;
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.header-icon {
+    margin-right:5px;
+}
+
+body {
+  font-family: roboto !important;
+}
+
+.header {
+    background-color:#004644 !important;
+}
+
+.main {
+    height: 96.2vh;
+    background-image: url("../images/background/landing.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.landing-logo {
+    /* Food Centric logo_transparent 1 */
+
+    position: absolute;
+    width: 390px;
+    height: 400px;
+    left: 0px;
+    top: 30px;
+    filter: brightness(25%);
+}
+
+.grab-meal-div {
+    position: absolute;
+    top: 500px;
+    left: 22px;
+    width: 350px;
+}
+
+.grab-meal-btn {
+     background-color: #004644 !important;
+     color: white !important;
+     font-weight: lighter !important;
+     letter-spacing: 1px;
+     font-size: 21px !important;
+     border-radius: 8px;
+}
+
+.get-meal-delivered-div {
+    position: absolute;
+    top: 600px;
+    left: 22px;
+    width: 350px;
+}
+
+.get-meal-delivered-btn {
+    /* background-color: #004644 !important; */
+     color: #004644 !important;
+     border-color: #004644 !important;
+     font-weight: lighter !important;
+     font-size: 21px !important;
+     letter-spacing: 1px;
+     border-radius: 8px;
+}
+
+.copy-rights {
+    position: absolute;
+    top: 770px;
+    left: 120px
+}
+
+.copy-rights-h4 {
+    font-weight: lighter !important;
+}
+
+.main-login {
+    height: 96.2vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/background/login.png");
+    background-repeat: no-repeat;
+}
+
+.register-login {
+    height: 96.2vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/background/register.png");
+    background-repeat: no-repeat;
+}
+
+.forget-password-login {
+    height: 96.2vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/background/forget-password.png");
+    background-repeat: no-repeat;
+}
+
+.login-logo {
+    position: absolute;
+    width: 390px;
+    height: 400px;
+    left: 0px;
+    top: 0px;
+}
+
+.login-username-div {
+    position: absolute;
+    top: 470px;
+    left: 50px;
+    width: 300px;
+}
+
+.login-username-input {
+    height: 50px;
+    padding-top: 0 !important;
+}
+
+.login-password-div {
+    position: absolute;
+    top: 550px;
+    left: 50px;
+    width: 300px;
+
+
+}
+
+.login-password-input {
+    height: 50px;
+    border-radius: 250px !important;
+    padding-top: 0 !important;
+}
+
+.login-div {
+    position: absolute;
+    top: 670px;
+    left: 100px;
+    width: 200px;
+
+}
+
+.login-btn {
+    background-color: #4DACA9 !important;
+    color: white !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px;
+    font-size: 21px !important;
+    border-radius: 8px;
+    padding: 0.2em !important;
+}
+.forget-password-div {
+    position: absolute;
+    top: 622px;
+    left: 200px;
+    width: 200px;
+
+}
+
+.forget-password-btn {
+    color: white !important;
+    font-weight: 100 !important;
+    letter-spacing: 1px;
+    font-size: 16px !important;
+    border-radius: 8px;
+    padding: 0.2em !important;
+    text-decoration: none;
+}
+
+.sign-up-div {
+    position: absolute;
+    top: 750px;
+    left: 80px
+}
+
+.sign-up-h4 {
+    font-weight: lighter !important;
+    color: white !important;
+}
+
+.sign-up-a {
+    color: #4DACA9 !important;
+    border-color: #4DACA9 !important;
+    text-decoration: none;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    text-shadow: none !important; 
+}
+
+.intro-welcome-div {
+    color: white !important;
+    padding: 100px 0 0 30px !important;
+}
+
+.intro-welcome-div h1 {
+    margin: 0;
+}
+
+.intro-welcome-div p {
+    margin: 0;
+}
+
+.carousel-indicators{
+    position: initial !important;
+}
+
+.carousel-info {
+    margin-top: 50px;
+}
+.carousel{
+    position:relative
+}
+.carousel-inner{position:relative;width:90%;overflow:hidden}
+.carousel-item{position:relative;display:none;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;transition:-webkit-transform .6s ease;transition:transform .6s ease;transition:transform .6s ease,-webkit-transform .6s ease;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}
+.carousel-item-next,.carousel-item-prev,.carousel-item.active{display:block}
+.carousel-item-next,.carousel-item-prev{position:absolute;top:0}
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right{-webkit-transform:translateX(0);transform:translateX(0)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.active.carousel-item-right,.carousel-item-next{-webkit-transform:translateX(100%);transform:translateX(100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.active.carousel-item-right,.carousel-item-next{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.active.carousel-item-left,.carousel-item-prev{-webkit-transform:translateX(-100%);transform:translateX(-100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.active.carousel-item-left,.carousel-item-prev{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}
+.active{display:block}
+.w-100{width:100%!important}
+.d-block{display:block!important; justify-content: center;}
+.carousel-indicators{position:absolute;right:0;bottom:10px;left:0;z-index:15;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-left:0;margin-right:15%;margin-left:15%;list-style:none}
+.carousel-indicators li{position:relative;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;background-color:rgba(255,255,255,.5)}.carousel-indicators li::before{position:absolute;top:-10px;left:0;display:inline-block;width:100%;height:10px;content:""}.carousel-indicators li::after{position:absolute;bottom:-10px;left:0;display:inline-block;width:100%;height:10px;content:""}.carousel-indicators .active{background-color:#fff}.carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}
+
+.gps-btn {
+    background-color: #4DACA9 !important;
+    color: white !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px;
+    /* height: 35px; */
+    width: 300px;
+    font-size: 21px !important;
+    border-radius: 8px;
+    padding: 0.2em !important;
+}
+
+.gps-div {
+    margin-top: 150px;
+}
+
+.skip-gps-btn {
+    display: block !important;
+    background-color: transparent !important;
+    border-color: #DA4144 !important;
+    text-shadow: none !important;
+    color: #DA4144 !important;
+    border-radius: 8px;
+    width: 150px;
+    font-weight: lighter;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    
+}
+
+.skip-gps-div {
+    margin-left: 75px;
+    margin-top: 30px;
+}
+
+.login-register-logo {
+    position: absolute;
+    width: 390px;
+    height: 400px;
+    left: 0px;
+    top: -50px;
+}
+
+.register-input-div {
+    padding: 200px 50px 0 50px;
+}
+
+.register-input {
+    margin-bottom: 30px !important;
+    border-radius: 20px !important;
+}
+.ui-corner-all {
+    border-radius: 10px !important;
+    height: 40px !important;
+}
+
+.mb-0{
+    padding-bottom: 0 !important;
+}
+
+.register-div {
+    /* position: absolute;
+    top: 670px; */
+    margin-left: 90px;
+    width: 200px;
+}
+
+.forget-password-h2 {
+    color: white !important;
+    margin-left: 29px;
+    margin-top: 30px;
+    font-weight: lighter;
+}
+
+.forget-password-p {
+    margin-right: 29px;
+}
+
+.forget-password-header {
+    display: flex;
+}
+
+.forget-password-email {
+    width: 300px !important;
+    margin-left: 45px;
+    margin-top: 40px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.forget-password-content {
+    margin-top: 80px;
+    /* margin-left: 10px; */
+    text-align: center;
+}
+
+.forget-password-reset {
+    margin-top: 100px !important;
+}
