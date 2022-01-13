@@ -328,3 +328,55 @@ body {
 .forget-password-reset {
     margin-top: 100px !important;
 }
+
+.home-header {
+    background-color:#004644 !important;
+    height: 100px;
+}
+
+.potrait-home-logo {
+    position: absolute;
+    width: 208px;
+    height: 201px;
+    left: 90px;
+    top: -52px;
+}
+
+.hambuger-icon {
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.qr-icon {
+    margin-top: 39px;
+    margin-left: 10px;
+}
+
+.home-welcome-div {
+    margin: 15px 0 0 15px;
+}
+
+.home-welcome-div h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.home-welcome-div p {
+    margin: 0;
+}
+
+.home-background {
+    background-color: #F4FCFC !important;
+}
+
+.home-search-input {
+    width: 85% !important ;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.ui-corner-all {
+    background-color: #C8F1F0 !important;
+}
