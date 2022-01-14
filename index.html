@@ -11,7 +11,12 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script>
+        function hellow() {
+            console.log("hellwo world");
+            $("#intro-welcome").append("<p>meka nam pissuwak bn<p>")
+        }
+    </script>
     <title>Food Centric</title>
 </head>
 <body>
@@ -86,7 +91,7 @@
         </div>
         <div data-role="main">
             <div  class="main-login">
-                <div class="intro-welcome-div">
+                <div id="intro-welcome" class="intro-welcome-div">
                     <h1>Hi Pasindu,</h1>
                     <p>Welcome onboard</p>
 
@@ -282,6 +287,111 @@
             <div  class="home-search-input">
                 <input class="mb-0" type="text" placeholder="  &#xf002;   Contact Number" style="font-family:Arial, FontAwesome" />
             </div>
+        </div>
+        <div class="rounded-icons-group">
+            <div class="rounded-icon">
+                <img class="fast-food" src="images/rounded-icons/fast-food.png"></img>
+                <p class="rounded-icon-fd-name">Fast food</p>
+            </div>
+            
+            <div class="rounded-icon">
+                <img class="rounded-icon-img" src="images/rounded-icons/pizza.png"></img>
+                <p class="rounded-icon-name">Pizza</p>
+            </div>
+            <div class="rounded-icon">
+                <img class="rounded-icon-img" src="images/rounded-icons/chinese.png"></img>
+                <p class="rounded-icon-chinese-name">Chinese</p>
+            </div>
+            <div class="rounded-icon">
+                <img class="rounded-icon-img" src="images/rounded-icons/more.png"></img>
+                <p class="rounded-icon-name">More</p>
+            </div>
+        </div>
+        <div class="food-items-list-header">
+            <h3>Food Menu</h3>
+            <a href="#">Check all</a>
+        </div>
+        <div class="food-item-list">
+            <div class="food-item-card">
+                <div class="favorite-div" >
+                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/randc.png" />
+                    <h5>Rice and Curry</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 250.00
+                    </h4>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="favorite-div" >
+                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/sea-food.png" />
+                    <h5>Sea food</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 600.00
+                    </h4>
+                </div>
+            </div> 
+            <div class="food-item-card">
+                <div class="favorite-div" >
+                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                </div>
+                <img src="./images/food-images/Mixed-food.png" />
+                <h5>Mixed food</h5>
+                <p>
+                    Dictum tortor nunc nibh egestas
+                </p>
+                <h4>
+                    Rs. 1000.00
+                </h4>
+            </div>
+            <div class="food-item-card">
+                <div class="favorite-div" >
+                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                </div>
+                <img src="./images/food-images/randc.png" />
+                <h5>Chopsy rice</h5>
+                <p>
+                    Dictum tortor nunc nibh egestas
+                </p>
+                <h4>
+                    Rs. 450.00
+                </h4>
+            </div>
+            
+        </div>
+        <div class="favorite-items-list-header">
+            <h3>Food Menu</h3>
+            <a href="#">Check all</a>
+        </div>
+        <div class="favorite-item-list">
+            <!-- <div class="food-item-card favorite-list-card">
+                <div class="favorite-div" >
+                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/sea-food.png" />
+                    <h5>Sea food</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 600.00
+                    </h4>
+                </div>
+            </div> -->
+            <p class="no-data-fav">Your favorite list is empty</p>
+            
         </div>
     </div>
 </body>

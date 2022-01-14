@@ -380,3 +380,141 @@ body {
 .ui-corner-all {
     background-color: #C8F1F0 !important;
 }
+
+.rounded-icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    box-shadow: 2px 5px 10px #888888;
+    background-color: white !important;
+    margin-left: 20px;
+    position: relative !important;
+    float: left;
+}
+
+.rounded-icons-group {
+    position: absolute !important;
+    margin-top:20px;
+}
+
+.rounded-icon-img {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+}
+
+.fast-food {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;  
+}
+
+.rounded-icon-name {
+    position: absolute !important;
+    top: 90%;
+    left:20%;
+}
+.rounded-icon-chinese-name {
+    position: absolute !important;
+    top: 90%;
+    left:10%;
+}
+
+.rounded-icon-fd-name {
+    position: absolute !important;
+    top: 90%
+}
+
+.food-items-list-header {
+    margin-top: 150px;
+    margin-left: 15px;
+}
+
+
+.food-items-list-header h3, .favorite-items-list-header h3 {
+    font-weight: normal;
+    float: left;
+}
+
+.food-items-list-header a, .favorite-items-list-header a {
+    font-weight: normal;
+    margin-top: 21px;
+    margin-right: 20px;
+    float: right;
+    text-decoration: none;
+}
+
+.favorite-items-list-header {
+    margin-left: 15px;
+}
+
+.food-item-card {
+    height: 170px;
+    width: 122px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px #888888;
+    background-color: white !important;
+    margin-left: 16px;
+}
+
+.food-item-card img {
+    height: 80px;
+    width: 122px;
+}
+
+.food-item-card h5{
+    margin: 5px 0 0 0;
+    text-align: center;
+}
+
+.food-item-card h4{
+    margin: 5px 0 0 0;
+    text-align: center;
+    color: #4DACA9;
+}
+
+.food-item-card p {
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+}
+
+.food-item-list {
+    position: relative;
+    margin-top: 210px;
+    width: 100%;
+    height: 190px;
+    display:flex;
+    overflow-x: scroll;
+}
+
+.favorite-item-list {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    display:flex;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+}
+
+.favorite-div {
+    position: absolute;
+    /* left:90px; */
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px #888888;
+    background-color: white !important;
+    margin-left: 85px;
+}
+
+.favorite-icon {
+    margin: 25% 25%;
+}
+
+.no-data-fav {
+    margin-left: 25%;
+    margin-top: 10%;
+}
