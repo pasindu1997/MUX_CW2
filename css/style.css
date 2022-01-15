@@ -658,6 +658,31 @@ body {
     
     left: 15%;
 }
-.confirm-and-send p{
+.confirm-and-send p, .back-to-home p{
     margin: 0 !important;
+}
+
+.email-sent{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.email-sent-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home {
+    background-color: #004644 !important;
+    color: white !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px;
+    align-self: center;
+    font-size: 16px !important;
+    width: 200px !important;
+    border-radius: 7px;
+    margin-top: 100px !important;
 }

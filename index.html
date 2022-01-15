@@ -525,16 +525,48 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="ui-btn confirm-and-send" >
+                    <a class="ui-btn confirm-and-send" href="#email-confirmation" >
                         <p>
                             Confirm & send
                         </p>
-                    </button>
+                    </a>
                 </div>
             </div>
     
         </div>
     </div>
 
+    // email-confirmation
+    <div data-role="page" id="email-confirmation" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>Email Sent</h1>
+            </div>
+            <div class="email-sent">
+                <img src="images/background/email-sent.png" />
+            </div>
+            <div class="email-sent-content">
+                <h2>Your email has successfully <br/> sent</h2>
+            </div>
+            <div class="email-sent-content">
+               <a class="ui-btn back-to-home" href="#potrait-home" >
+                    <p>
+                        Back To Home
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
