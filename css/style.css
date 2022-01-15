@@ -377,9 +377,11 @@ body {
     margin-top: 20px;
 }
 
-.ui-corner-all {
+.home-search-input .ui-corner-all {
     background-color: #C8F1F0 !important;
 }
+
+
 
 .rounded-icon {
     height: 70px;
@@ -568,4 +570,94 @@ body {
 
 .delete-icon {
     margin: 15% 15%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  padding-top: 300px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 5px;
+  text-align: center;
+  font-weight: lighter !important;
+  /* background-color: #5cb85c; */
+  /* color: white; */
+}
+
+.modal-header h4 {
+  font-weight: bold !important;
+  /* background-color: #5cb85c; */
+  /* color: white; */
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: 300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.confirm-and-send {
+    background-color: #004644 !important;
+    color: white !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px;
+    align-self: center;
+    font-size: 16px !important;
+    width: 200px !important;
+    border-radius: 7px;
+    
+    left: 15%;
+}
+.confirm-and-send p{
+    margin: 0 !important;
 }

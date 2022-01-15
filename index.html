@@ -12,9 +12,38 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
-        function hellow() {
-            console.log("hellwo world");
-            $("#intro-welcome").append("<p>meka nam pissuwak bn<p>")
+        // Get the modal
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        console.log(btn)
+        // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+        const handleSendEmail = () => {
+            console.log("hi pren");
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+        // // When the user clicks on the button, open the modal
+        // btn.onclick = function() {
+           
+        // }
+        
+        const handleCloseSpan = () => {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        // When the user clicks on <span> (x), close the modal
+        // span.onclick = function() {
+        // }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
     </script>
     <title>Food Centric</title>
@@ -181,7 +210,7 @@
                         <a href="#introductory" class="ui-btn gps-btn" >Turn on GPS</a>
                     </div>
                     <div class="skip-gps-div">
-                        <a class="ui-btn skip-gps-btn" href="#">Skip</a>
+                        <a class="ui-btn skip-gps-btn" href="#potrait-home">Skip</a>
                     </div>
                 </div>
 
@@ -371,8 +400,8 @@
             
         </div>
         <div class="favorite-items-list-header">
-            <h3>Food Menu</h3>
-            <a href="#">Check all</a>
+            <h3>Favorite List</h3>
+            <a href="#favorite-page">Check all</a>
         </div>
         <div class="favorite-item-list">
             <!-- <div class="food-item-card favorite-list-card">
@@ -474,13 +503,38 @@
             </div>
         </div>
         <div>
-            <button class="ui-btn send-email">
+            <button onclick="handleSendEmail()" class="ui-btn send-email" >
                 <span class="iconify send-email-icon" data-icon="bi:send" style="color: white;" data-width="34" data-height="34"></span>
                 <p>
                     Send as email
                 </p>
             </button>
         </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+    
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span onclick="handleCloseSpan()" class="iconify close" data-icon="ant-design:close-outlined" style="color: #f24e1e;" data-width="24" data-height="24"></span>
+                    <h4>Send Favorites As Email</h4>
+                </div>
+                <div class="modal-body">
+                    <div >
+                        <input class="mb-0" type="text" placeholder="  &#xf0e0;   Email Address" style="font-family:Arial, FontAwesome" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="ui-btn confirm-and-send" >
+                        <p>
+                            Confirm & send
+                        </p>
+                    </button>
+                </div>
+            </div>
+    
+        </div>
     </div>
+
 </body>
 </html>
