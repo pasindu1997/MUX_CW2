@@ -536,6 +536,18 @@ body {
     margin-left: 85px;
 }
 
+.cart-div {
+    position: absolute;
+    /* left:90px; */
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px #888888;
+    background-color: white !important;
+    margin-left: 310px;
+    margin-top: 10px;
+}
+
 .favorite-icon {
     margin: 25% 25%;
 }
@@ -759,4 +771,34 @@ body {
 
 .extra2 {
     width: 100px !important;
+}
+
+.number span {cursor:pointer; }
+.number{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.minus, .plus{
+    width:20px;
+    height:20px;
+    background:#f2f2f2;
+    border-radius:4px;
+    padding:8px 5px 8px 5px;
+    border:1px solid #ddd;
+    display: inline-block;
+    background-color:#001B36;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+.number input{
+    height:34px;
+    width: 50px !important;
+    text-align: center;
+    font-size: 26px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
+    
 }

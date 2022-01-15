@@ -45,6 +45,24 @@
                 modal.style.display = "none";
             }
         }
+
+        //new one
+        	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
     </script>
     <title>Food Centric</title>
 </head>
@@ -592,8 +610,8 @@
                 <div class="col">
                     <div class="cart-item-card">
                         <div class="row">
-                            <div class="favorite-div" >
-                                <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                            <div class="cart-div" >
+                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
                             </div>
                             <div>
                                 <img src="./images/cart-images/randc.png" />
@@ -612,16 +630,24 @@
                                             <label for="extra2"> Cheese++</label>
                                         </div>
                                     </fieldset>
-                                    <h4>
-                                        Rs. 250.00
-                                    </h4>
+                                    <div class="row">
+
+                                        <h4>
+                                            Rs. 250
+                                        </h4>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input data-role="none" type="text" value="1"/>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div><div class="cart-item-card">
                         <div class="row">
-                            <div class="favorite-div" >
-                                <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                            <div class="cart-div" >
+                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
                             </div>
                             <div>
                                 <img src="./images/cart-images/randc.png" />
@@ -640,16 +666,24 @@
                                             <label for="extra2"> Cheese++</label>
                                         </div>
                                     </fieldset>
-                                    <h4>
-                                        Rs. 250.00
-                                    </h4>
+                                    <div class="row">
+
+                                        <h4>
+                                            Rs. 250
+                                        </h4>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input data-role="none" type="text" value="1"/>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div><div class="cart-item-card">
                         <div class="row">
-                            <div class="favorite-div" >
-                                <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                            <div class="cart-div" >
+                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
                             </div>
                             <div>
                                 <img src="./images/cart-images/randc.png" />
@@ -668,14 +702,131 @@
                                             <label for="extra2"> Cheese++</label>
                                         </div>
                                     </fieldset>
-                                    <h4>
-                                        Rs. 250.00
-                                    </h4>
+                                    <div class="row">
+
+                                        <h4>
+                                            Rs. 250
+                                        </h4>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input data-role="none" type="text" value="1"/>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
+                </div> <div class="col">
+                    <div class="cart-item-card">
+                        <div class="row">
+                            <div class="cart-div" >
+                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
+                            </div>
+                            <div>
+                                <img src="./images/cart-images/randc.png" />
+                                <div class="cart-card-content">
+                                    <h5>Rice and Curry</h5>
+                                    <p>
+                                        Dictum tortor nunc nibh egestas
+                                    </p>
+                                    <fieldset class="row fieldset" >
+                                        <div class="extra1">
+                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
+                                            <label for="extra1"> Spicy++</label>
+                                        </div>
+                                        <div class="extra2">
+                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
+                                            <label for="extra2"> Cheese++</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+
+                                        <h4>
+                                            Rs. 250
+                                        </h4>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input data-role="none" type="text" value="1"/>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="cart-item-card">
+                        <div class="row">
+                            <div class="cart-div" >
+                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
+                            </div>
+                            <div>
+                                <img src="./images/cart-images/randc.png" />
+                                <div class="cart-card-content">
+                                    <h5>Rice and Curry</h5>
+                                    <p>
+                                        Dictum tortor nunc nibh egestas
+                                    </p>
+                                    <fieldset class="row fieldset" >
+                                        <div class="extra1">
+                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
+                                            <label for="extra1"> Spicy++</label>
+                                        </div>
+                                        <div class="extra2">
+                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
+                                            <label for="extra2"> Cheese++</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+
+                                        <h4>
+                                            Rs. 250
+                                        </h4>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input data-role="none" type="text" value="1"/>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="cart-item-card">
+                        <div class="row">
+                            <div class="cart-div" >
+                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
+                            </div>
+                            <div>
+                                <img src="./images/cart-images/randc.png" />
+                                <div class="cart-card-content">
+                                    <h5>Rice and Curry</h5>
+                                    <p>
+                                        Dictum tortor nunc nibh egestas
+                                    </p>
+                                    <fieldset class="row fieldset" >
+                                        <div class="extra1">
+                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
+                                            <label for="extra1"> Spicy++</label>
+                                        </div>
+                                        <div class="extra2">
+                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
+                                            <label for="extra2"> Cheese++</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+
+                                        <h4>
+                                            Rs. 250
+                                        </h4>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input data-role="none" type="text" value="1"/>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div> 
             </div>
         </div>
