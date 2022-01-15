@@ -464,18 +464,33 @@ body {
     width: 122px;
 }
 
-.food-item-card h5{
+.favorite-item-card {
+    height: 170px;
+    width: 110px !important;
+    margin: 10px 8px !important;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px #888888;
+    background-color: white !important;
+}
+
+.favorite-item-card img {
+    height: 80px;
+    width: 110px;
+}
+
+
+.food-item-card h5, .favorite-item-card h5{
     margin: 5px 0 0 0;
     text-align: center;
 }
 
-.food-item-card h4{
+.food-item-card h4, .favorite-item-card h4 {
     margin: 5px 0 0 0;
     text-align: center;
     color: #4DACA9;
 }
 
-.food-item-card p {
+.food-item-card p, .favorite-item-card p {
     margin: 0;
     text-align: center;
     font-size: 10px;
@@ -490,12 +505,21 @@ body {
     overflow-x: scroll;
 }
 
+.food-item-list-no-scroll {
+    /* width: 500px; */
+    /* height: 100%; */
+    /* display:flex; */
+    margin: 5 5px !important;
+    padding-bottom: 10px;
+}
+
+
 .favorite-item-list {
-    position: relative;
-    width: 100%;
+    /* position: relative; */
+    width: 300px;
     height: 190px;
     display:flex;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     margin-bottom: 30px;
 }
 
@@ -517,4 +541,31 @@ body {
 .no-data-fav {
     margin-left: 25%;
     margin-top: 10%;
+}
+
+.favorite-welcome {
+    margin-bottom: 30px;
+}
+
+.send-email {
+    position: fixed !important;
+    left: 177px;
+    top: 725px !important;
+    background-color: #004644 !important;
+    color: white !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px;
+    font-size: 16px !important;
+    width: 200px !important;
+    border-radius: 7px;
+}
+
+.send-email-icon {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.delete-icon {
+    margin: 15% 15%;
 }
