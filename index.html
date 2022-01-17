@@ -11,59 +11,7 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-        // Get the modal
-        
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        console.log(btn)
-        // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            
-        const handleSendEmail = () => {
-            console.log("hi pren");
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
-        }
-        // // When the user clicks on the button, open the modal
-        // btn.onclick = function() {
-           
-        // }
-        
-        const handleCloseSpan = () => {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-        // When the user clicks on <span> (x), close the modal
-        // span.onclick = function() {
-        // }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            var modal = document.getElementById("myModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        //new one
-        	$(document).ready(function() {
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 1 ? 1 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
-		});
-    </script>
+    <script src="js/script.js"></script>
     <title>Food Centric</title>
 </head>
 <body>
@@ -107,17 +55,20 @@
         <div data-role="main">
             <div  class="main-login">
                 <img class="login-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <div class="error-message-div" id="error-message-div">
+                   
+                </div>
                 <div class="login-username-div">
-                    <input  class="login-username-input" type="text" placeholder="  &#xf2c0;   Username" style="font-family:Arial, FontAwesome" />
+                    <input  class="login-username-input" id="login-username-input" type="text" placeholder="  &#xf2c0;   Username" style="font-family:Arial, FontAwesome" />
                 </div>
                 <div class="login-password-div">
-                    <input  class="login-password-input" type="text" placeholder="  &#xf023;   Password" style="font-family:Arial, FontAwesome" />
+                    <input  class="login-password-input" id="login-password-input" type="password" placeholder="  &#xf023;   Password" style="font-family:Arial, FontAwesome" />
                 </div>
                 <div class="forget-password-div">
                     <a href="#forget-password" data-transition="slide" class="forget-password-btn" >Forget Password?</a>
                 </div>
                 <div class="login-div">
-                    <a href="#introductory" data-transition="slide" class="ui-btn login-btn" >Login</a>
+                    <a id="login-button" data-transition="slide" class="ui-btn login-btn" >Login</a>
                 </div>
                 <div class="sign-up-div">
                     <h4 class="sign-up-h4">Do not have an account?&nbsp;&nbsp; <a href="#register"  data-transition="slideup" class="sign-up-a">Sign Up</a></h4>
@@ -358,87 +309,15 @@
             <h3>Food Menu</h3>
             <a href="#">Check all</a>
         </div>
-        <div class="food-item-list">
-            <div class="food-item-card">
-                <div class="favorite-div" >
-                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
-                </div>
-                <div>
-                    <img src="./images/food-images/randc.png" />
-                    <h5>Rice and Curry</h5>
-                    <p>
-                        Dictum tortor nunc nibh egestas
-                    </p>
-                    <h4>
-                        Rs. 250.00
-                    </h4>
-                </div>
-            </div>
-            <div class="food-item-card">
-                <div class="favorite-div" >
-                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
-                </div>
-                <div>
-                    <img src="./images/food-images/sea-food.png" />
-                    <h5>Sea food</h5>
-                    <p>
-                        Dictum tortor nunc nibh egestas
-                    </p>
-                    <h4>
-                        Rs. 600.00
-                    </h4>
-                </div>
-            </div> 
-            <div class="food-item-card">
-                <div class="favorite-div" >
-                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
-                </div>
-                <img src="./images/food-images/Mixed-food.png" />
-                <h5>Mixed food</h5>
-                <p>
-                    Dictum tortor nunc nibh egestas
-                </p>
-                <h4>
-                    Rs. 1000.00
-                </h4>
-            </div>
-            <div class="food-item-card">
-                <div class="favorite-div" >
-                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
-                </div>
-                <img src="./images/food-images/randc.png" />
-                <h5>Chopsy rice</h5>
-                <p>
-                    Dictum tortor nunc nibh egestas
-                </p>
-                <h4>
-                    Rs. 450.00
-                </h4>
-            </div>
-            
+        <div class="food-item-list" id="food-item-list">
+           
         </div>
         <div class="favorite-items-list-header">
             <h3>Favorite List</h3>
             <a href="#favorite-page">Check all</a>
         </div>
-        <div class="favorite-item-list">
-            <!-- <div class="food-item-card favorite-list-card">
-                <div class="favorite-div" >
-                    <span class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
-                </div>
-                <div>
-                    <img src="./images/food-images/sea-food.png" />
-                    <h5>Sea food</h5>
-                    <p>
-                        Dictum tortor nunc nibh egestas
-                    </p>
-                    <h4>
-                        Rs. 600.00
-                    </h4>
-                </div>
-            </div> -->
-            <p class="no-data-fav">Your favorite list is empty</p>
-            
+        <div class="favorite-item-list" id="favFoodList">
+           
         </div>
     </div>
 
@@ -875,7 +754,7 @@
         </div>
         <div data-role="main" class="home-main">
             <div class="home-welcome-div">
-                <h1>My Cart</h1>
+                <h1>Checkout</h1>
             </div>
             <div class="coupon-code">
                 <div class="checkout-sub-heaers">

@@ -532,7 +532,7 @@ body {
     width: 30px;
     border-radius: 20px;
     box-shadow: 2px 5px 10px #888888;
-    background-color: white !important;
+    background-color: white;
     margin-left: 85px;
 }
 
@@ -843,4 +843,15 @@ td, th {
 
 .mt-cp {
     margin-top: 50px !important;
+}
+
+.error-message-div p{
+    color: red;
+}
+
+.error-message-div {
+    padding-top: 300px;
+    display: flex;
+    justify-content:center;
+    color: red;
 }
