@@ -340,7 +340,7 @@
                 <p>Here is what you love</p>
             </div>
         </div>
-        <div class="food-item-list-no-scroll ui-grid-b">
+        <div class="food-item-list-no-scroll ui-grid-b" id="favFoodItemsPage">
             <div class="favorite-item-card ui-block-b">
                 <div class="favorite-div" >
                     <span class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
@@ -355,7 +355,9 @@
                         Rs. 600.00
                     </h4>
                 </div>
-            </div><div class="favorite-item-card ui-block-b">
+            </div>
+            
+            <div class="favorite-item-card ui-block-b">
                 <div class="favorite-div" >
                     <span class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
                 </div>
@@ -402,7 +404,7 @@
             </div>
         </div>
         <div>
-            <button onclick="handleSendEmail()" class="ui-btn send-email" >
+            <button onclick="handleSendEmail()" class="ui-btn send-email">
                 <span class="iconify send-email-icon" data-icon="bi:send" style="color: white;" data-width="34" data-height="34"></span>
                 <p>
                     Send as email
@@ -420,11 +422,14 @@
                 </div>
                 <div class="modal-body">
                     <div >
-                        <input class="mb-0" type="text" placeholder="  &#xf0e0;   Email Address" style="font-family:Arial, FontAwesome" />
+                        <input id="favEmailReceipt" class="mb-0" type="email" placeholder="  &#xf0e0;   Email Address" style="font-family:Arial, FontAwesome"  required/>
+                        <div id="favEmailErrorMsg">
+                           
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a class="ui-btn confirm-and-send" href="#email-confirmation" >
+                    <a onclick="sendEmail()" class="ui-btn confirm-and-send">
                         <p>
                             Confirm & send
                         </p>

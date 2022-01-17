@@ -85,14 +85,15 @@ const handleFavorite = (id) => {
 const renderFavListHome = () => {
     const favoriteList = JSON.parse(window.localStorage.getItem("favoriteList"));
     var favListHtml = '';
+    var favPageHtml = '';
 
     if (favoriteList.length > 0) {
         favoriteList.forEach(element => {
             favListHtml = favListHtml + `
             <div class="food-item-card">
-            <div class="favorite-div" id="addToFavorite${element.id}" onclick="handleFavorite(${element.id})" >
-            <span id="favoriteIcon${element.id}" class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
-            </div>
+                <div class="favorite-div" id="addToFavorite${element.id}" onclick="handleFavorite(${element.id})" >
+                    <span id="favoriteIcon${element.id}" class="iconify favorite-icon" data-icon="grommet-icons:favorite" style="color: #e84c4f;"></span>
+                </div>
             <div>
             <img src=${element.imgSrc} />
             <h5>${element.name}</h5>
@@ -104,12 +105,48 @@ const renderFavListHome = () => {
             </h4>
             </div>
             </div>
-            `
+            `;
+
+            favPageHtml = favPageHtml + `
+                <div class="favorite-item-card ui-block-b">
+                <div class="favorite-div" id="addToFavorite${element.id}" onclick="handleFavorite(${element.id})">
+                    <span id="favoriteIcon${element.id}" class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                </div>
+                <div>
+                    <img src=${element.imgSrc} />
+                    <h5>${element.name}</h5>
+                    <p>
+                         ${element.description}
+                    </p>
+                    <h4>
+                       ${element.price}
+                    </h4>
+                </div>
+            </div>
+            `;
         });
 
         document.getElementById('favFoodList').innerHTML = favListHtml
+        document.getElementById('favFoodItemsPage').innerHTML = favPageHtml
     } else {
-        document.getElementById('favFoodList').innerHTML = ' <p class="no-data-fav">Your favorite list is empty</p>'
+        document.getElementById('favFoodList').innerHTML = ' <p class="no-data-fav">Your favorite list is empty</p>';
+        document.getElementById('favFoodItemsPage').innerHTML = ' <p class="no-data-fav">Your favorite list is empty</p>';
+    }
+}
+
+const sendEmail = () => {
+    if ($('#favEmailReceipt').val() !== "") {
+        const payload = window.localStorage.getItem("favoriteList");
+        $.ajax({
+            method: "POST",
+            url: "/mobile/php/email.php",
+            data: { email: $('#favEmailReceipt').val(), data: payload }
+        })
+            .done(function (response) {
+                window.location.href = '#email-confirmation'
+            });
+    } else {
+        document.getElementById('favEmailErrorMsg').innerHTML = ' <p style="color:#f24e1e">Email is required</p>';
     }
 }
 
