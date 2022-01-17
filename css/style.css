@@ -826,12 +826,21 @@ td, th {
 
 .cart-checkout-btn {
     width: 200px;
-    background-color: #4DACA9 !important;
+    background-color: #004644 !important;
     color: white !important;
     font-weight: lighter !important;
     letter-spacing: 1px;
-    font-size: 21px !important;
+    font-size: 16px !important;
     border-radius: 8px;
     padding: 0.2em !important;
     margin-left: 60px !important;
+}
+
+
+.coupon-code {
+    padding: 0 15px;
+}
+
+.mt-cp {
+    margin-top: 50px !important;
 }

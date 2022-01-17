@@ -855,7 +855,64 @@
                     </tr>
                 </table>
                 <div class="cart-checkout-btn-div">
-                        <a href="#introductory" data-transition="slide" class="ui-btn cart-checkout-btn" >Login</a>
+                        <a href="#checkout" data-transition="slide" class="ui-btn cart-checkout-btn" >Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="checkout" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>My Cart</h1>
+            </div>
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Coupon code</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Coupon code" style="font-family:Arial, FontAwesome" />
+                </div>
+            </div>
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Payment method</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Coupon code" style="font-family:Arial, FontAwesome" disabled value="LKR 7250 - Stripe" />
+                </div>
+            </div>
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Address</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Billing Address" style="font-family:Arial, FontAwesome" />
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Delievery Address" style="font-family:Arial, FontAwesome" />
+                </div>
+            </div> 
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Delievery Note</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Enter your note" style="font-family:Arial, FontAwesome" />
+                </div>
+                <div class="cart-checkout-btn-div">
+                    <a href="#checkout" data-transition="slide" class="ui-btn cart-checkout-btn mt-cp" >Confirm And Pay</a>
                 </div>
             </div>
         </div>
