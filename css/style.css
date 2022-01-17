@@ -517,11 +517,11 @@ body {
 }
 
 .favorite-item-list {
-    /* position: relative; */
-    width: 300px;
+    position: relative;
+    width: 100%;
     height: 190px;
     display:flex;
-    /* overflow-x: scroll; */
+    overflow-x: scroll;
     margin-bottom: 30px;
 }
 
