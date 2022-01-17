@@ -17,28 +17,21 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'sramanayaka222';                     //SMTP username
-    $mail->Password   = 'Suresh1999';                               //SMTP password
-    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                     
+    $mail->isSMTP();                                           
+    $mail->Host       = 'smtp.gmail.com';                    
+    $mail->SMTPAuth   = true;                                  
+    $mail->Username   = 'sramanayaka222';                    
+    $mail->Password   = 'Suresh1999';                              
+    $mail->SMTPSecure = 'tls';           
+    $mail->Port       = 587;                                    
 
     //Recipients
     $mail->setFrom('foodcentric@example.com', 'Food Centric');
-    $mail->addAddress($_POST['email'], '');     //Add a recipient
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
-
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+    $mail->addAddress($_POST['email'], '');     
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->isHTML(true);                                  
     $mail->Subject = 'Your Favorite list from food centric ';
     $mail->Body    = $_POST['data'];
 
