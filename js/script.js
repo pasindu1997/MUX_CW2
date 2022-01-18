@@ -359,6 +359,23 @@ $(document).ready(function () {
         $('#commentText').val('');
     })
 
+    $('#addReview').on('click', function () {
+        var review = $('#reviewText').val();
+        $('#newReviewSection').append(`
+            <div>
+                <hr>
+                <div class="circle5">
+                    <p>K</p>
+                </div>
+                <div style="margin-left: 20px">
+                    <p style="color: white;">Ravindu Kithmini 09/08/2021  8.56 am<br>${review}<br></p>   
+                </div>
+                <br><br>
+            </div> 
+        `);
+        $('#reviewText').val('');
+    })
+
     var checkoutTotal = JSON.parse(window.localStorage.getItem("checkoutTotal"));
     $('#checkoutAndPay').on('click', function () {
 
