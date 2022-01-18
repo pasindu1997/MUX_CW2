@@ -426,6 +426,17 @@ body {
     background-color: #C8F1F0 !important;
 }
 
+.addCommentBtn {
+    display:flex !important;
+    justify-content:center !important;
+    background-color: green; 
+    height: 50px;
+}
+
+.addCommentBtn h3 {
+color: white;
+}
+
 .qr-logo {
     /* Food Centric logo_transparent 1 */
 
