@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -260,5 +261,219 @@
             </div>
         </div>
     </div>
+
+    <!-- food item details page -->
+    <div data-role="page" id="food-item-details" class="food-item-main">
+        <div data-role="header" data-position="fixed" class="ui-grid-a header">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b center">
+                <p style="color: white;">FOOD ITEM DETAILS
+                </p>
+            </div>
+        </div>
+        <div data-role="main" >
+            <div class="food-item">
+                <img class="item-food1" src="./images/foods/1.jpg" />
+                <p class="p1">CREAMY MUSHROOM PASTA<br>
+                    Rs 750.00<br>
+                    Rate this meal<br>
+                    (5.0)
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>(14 reviews)
+                    <br>
+                    <button class="button2">Write a review</button>
+                    FOOD DESCRIPTION : This creamy mushroom pasta is a rich,<br> umami-filled delight that cooks quickly and easily in one pot.<br> 
+                    
+                </p>
+                
+            </div>
+            <div class="food-item2">
+                <img class="item-food2" src="./images/foods/2.jpg" />
+                <p class="p2">FOOD PICASSO<br>
+                    HOURS : 8 am - 9 pm  OPEN<br>
+                    ADDRESS: Second Lane , Egodwatta, Boralesgamuwa<br>
+                    PHONE: 0774566541<br>
+                    <button class="button">ADD TO CART</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+     <!-- QR Promotion page -->
+     <div data-role="page" id="qr-promotion" class="qr-promotion-main">
+        <div data-role="header" data-position="fixed" class="ui-grid-a header">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b center">
+                <p style="color: white;">QR PROMOTIONS
+                </p>
+            </div>
+        </div>
+        <div data-role="main">
+            <img class="qr-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+            <div class="qr_main" >
+                <h1 class="scan-welcome">WELCOME !!!!!<br> SCAN QR CODE<br>
+                    TO VIEW MENU</h1>
+            </div>
+        </div>
+    </div>
+
+     <!--comment page -->
+     <div data-role="page" id="comment-page" class="comment-page-main">
+        <div data-role="header" data-position="fixed" class="ui-grid-a header">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b center">
+                <p style="color: white;">COMMENTS
+                </p>
+            </div>
+        </div>
+        <div data-role="main">
+            <div class="circle1">
+                <p>P</p>
+            </div>
+            <p class="pasindu" style="color: white;">Pasindu Kumara<br>09/08/2021  8.56 am<br>Creamy mushroom pasta still Available??????<br>replied by FOOD PICASSO</p>
+            <div class="circle2">
+                <p>FP</p>
+            </div>
+            <p class="pasindu1" style="color: white;">Food Picasso<br>09/08/2021  10.00 am<br>Hi @Pasindu Kumara Yes Sir Available.</p>
+            <br>
+            <hr>
+            <div class="circle3">
+                <p>K</p>
+            </div>
+            <p class="pasindu2" style="color: white;">Pasindu Kumara<br>09/08/2021  8.56 am<br>Creamy mushroom pasta still Available??????<br>replied by FOOD PICASSO</p>   
+            <div class="circle4">
+                <p>FP</p>
+            </div>
+            <p class="pasindu3" style="color: white;">Food Picasso<br>09/08/2021  10.00 am<br>Hi @Pasindu Kumara Yes Sir Available.</p>
+            <br><br>
+            <textarea rows="4" cols="50" name="comment" form="usrform">
+                Type your comment......</textarea>
+        </div>
+    </div>
+
+    <!--review page -->
+    <div data-role="page" id="review-page" class="review-page-main">
+        <div data-role="header" data-position="fixed" class="ui-grid-a header">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b center">
+                <p style="color: white;">REVIEWS
+                </p>
+            </div>
+        </div>
+        <div data-role="main">
+            <div class="header-btn">
+                <button class="button3">ALL</button>
+                <button class="button4">POSITIVE</button>
+                <button class="button5">CRITICAL</button>
+            </div>
+            <hr>
+            <div class="most-relavant">
+            <p style="color: white">All</p>
+            <p class="p0" style="color: white">Most Relevant</p>
+            </div>
+            <hr>
+            <div class="circle11">
+                <p>P</p>
+            </div>
+            <p class="pasindu0" style="color: white;">Pasindu Kumara<br>09/08/2021  8.56 am<br>Creamy mushroom pasta still Available??????<br>replied by FOOD PICASSO</p>
+            <div class="circle21">
+                <p>FP</p>
+            </div>
+            <p class="pasindu11" style="color: white;">Food Picasso<br>09/08/2021  10.00 am<br>Hi @Pasindu Kumara Yes Sir Available.</p>
+            <br>
+            <hr>
+            <div class="circle31">
+                <p>K</p>
+            </div>
+            <p class="pasindu21" style="color: white;">Pasindu Kumara<br>09/08/2021  8.56 am<br>Creamy mushroom pasta still Available??????<br></p>
+            <br><br>
+            <textarea rows="4" cols="50" name="comment" form="usrform">
+                Type your review......</textarea>
+        </div>
+    </div>
+
+    <!--scan page -->
+    <div data-role="page" id="scan-page" class="scan-page-main">
+        <div data-role="header" data-position="fixed" class="ui-grid-a header">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b center">
+                <p style="color: white;">SCAN QR CODE
+                </p>
+            </div>
+        </div>
+        <div data-role="main">
+            <div class="qr-scan">
+                <img class="qr-scan1" src="./images/foods/5.JPG" />
+                <div class="rectangle"></div>
+                
+            </div> 
+            
+        </div>
+    </div>
+
+    <!-- food item details navigation page -->
+    <div data-role="page" id="food-item-details-navigation" class="food-item-main">
+        <div data-role="header" data-position="fixed" class="ui-grid-a header">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b center">
+                <p style="color: white;">FOOD ITEM DETAILS
+                </p>
+            </div>
+        </div>
+        <div data-role="main" >
+
+            <div class="food-item">
+                <img class="item-food1" src="./images/foods/1.jpg" />
+                <p class="p1">CREAMY MUSHROOM PASTA<br>
+                    Rs 750.00<br>
+                    Rate this meal<br>
+                    (5.0)
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>(14 reviews)
+                    <br>
+                    <button class="button2">Write a review</button>
+                    FOOD DESCRIPTION : This creamy mushroom pasta is a rich,<br> umami-filled delight that cooks quickly and easily in one pot.<br> 
+                    
+                </p>
+                
+            </div>
+            <div class="food-item2">
+                <div class="rectangle">
+
+                    <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                    <button class="butt">HOME</button>
+                    <button class="butt">SEARCH</button>
+                    <button class="butt">CATEGORIES</button>
+                    <button class="butt">CART</button>
+                    <button class="butt">PROFILE</button>
+                    <button class="butt">ABOUT US</button>
+                    <button class="butt">HELP</button>
+                    <button class="butt">SETTING</button>
+                    <button class="butt">LOG OUT</button>
+                </div>
+                
+                <img class="item-food2" src="./images/foods/2.jpg" />
+                <p class="p2">FOOD PICASSO<br>
+                    HOURS : 8 am - 9 pm  OPEN<br>
+                    ADDRESS: Second Lane , Egodwatta, Boralesgamuwa<br>
+                    PHONE: 0774566541<br>
+                    <button class="button">ADD TO CART</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
