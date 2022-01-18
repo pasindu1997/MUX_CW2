@@ -61,13 +61,13 @@ window.onclick = function (event) {
 }
 
 const navigationBar = () => {
-    console.log("skldncsdnc")
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
         x.style.display = "block";
     }
+    console.log(x.style.display)
 }
 
 const navigationBarLand = () => {
