@@ -1304,3 +1304,73 @@ td, th {
   .row-qr{
     display:flex;
   }
+
+
+
+
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+#myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.rectangle {
+    position: fixed;
+    height: 330px;
+    width: 250px;
+    background-color: #004644;
+    -ms-transform: scaleY(1.5); /* IE 9 */
+    transform: scaleY(1.5);
+    opacity: 0.8;
+    margin-left: 240px;
+    margin-top:65px;
+    z-index: 1;
+  }
+
+  .butt {
+    background-color: #4DACA9 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100px !important;
+    height: 20px !important;
+    left: 25px;
+    top:-30px;
+}

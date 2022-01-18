@@ -517,7 +517,15 @@
         <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
             <div>
                 <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
-                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <a href="javascript:void(0);" class="icon" onclick="navigationBar()">
+                    <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                </a>
+                <!-- <div id="myLinks">
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div> -->
+                
                 <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
             </div>
             <div class="ui-block-b center">
@@ -526,6 +534,18 @@
             </div>
         </div>
         <div data-role="main" class="home-main">
+            <div class="rectangle" id="myLinks" >
+                    <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                    <button class="butt">HOME</button>
+                    <button class="butt">SEARCH</button>
+                    <button class="butt">CATEGORIES</button>
+                    <button class="butt">CART</button>
+                    <button class="butt">PROFILE</button>
+                    <button class="butt">ABOUT US</button>
+                    <button class="butt">HELP</button>
+                    <button class="butt">SETTING</button>
+                    <button class="butt">LOG OUT</button>
+                </div>
             <div class="home-welcome-div">
                 <h1>Hi Pasindu,</h1>
                 <p>Time to grab a meal</p>

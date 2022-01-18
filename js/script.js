@@ -60,6 +60,16 @@ window.onclick = function (event) {
     }
 }
 
+const navigationBar = () => {
+    console.log("skldncsdnc")
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 const handleFavorite = (id) => {
     if ($(`#addToFavorite${id}`).css("background-color") === "rgb(255, 255, 255)") {
         $(`#addToFavorite${id}`).css("background-color", "#E84C4F");
