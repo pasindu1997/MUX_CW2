@@ -329,6 +329,424 @@ body {
     margin-top: 100px !important;
 }
 
+.item-food1 {
+
+    /* position: absolute; */
+    width: 414px;
+    height: 175px;
+    /* left: 40px; */
+    /* top: 30px; */
+
+}
+
+.item-food2 {
+    position: absolute;
+    top: 55px;
+    width: 390px;
+    height: 175px;
+    /* left: 454px; */
+    /*  z-index: 1; */
+    /* z-index: -1; */
+    /* position:relative; */
+
+    
+
+}
+
+.food-item {
+    margin-left: 40px;
+}
+
+.food-item2 {
+    margin-left: 454px;
+}
+
+.food-item-main {
+    background-color: #EAF4FF !important;
+    /* z-index: -1; */
+}
+
+.p2 {
+    position: absolute;
+    top: 230px; 
+
+}
+.button {
+   
+    background-color: #E84C4F !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px !important;
+    margin: 4px 2px;
+    cursor: pointer; 
+    width: 280px !important;
+    left: 17%;
+    /* top: 13px !important;  */
+    
+} 
+
+.checked {
+    color: orange;
+}
+
+.button2 {
+    background-color: #4DACA9 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 150px !important;
+}
+
+.qr_main {
+    height: 96.2vh;
+    background-image: url("../images/foods/3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 250px;
+}
+
+.scan-welcome {
+    position: absolute;
+    left: 150px;
+
+}
+
+.qr-promotion-main {
+    background-color: #C8F1F0 !important;
+}
+
+.addCommentBtn {
+    display:flex !important;
+    justify-content:center !important;
+    background-color: green; 
+    height: 50px;
+}
+
+.addCommentBtn h3 {
+color: white;
+}
+
+.qr-logo {
+    /* Food Centric logo_transparent 1 */
+
+    position: absolute;
+    width: 210px;
+    height: 230px;
+    left: 20px;
+    top: 220px;
+    filter: brightness(5%);
+}
+
+.comment-page-main {
+    background-color: #001B36
+    !important;
+}
+
+.circle1 {
+    height: 40px;
+    width: 40px;
+    background-color: #F24E1E;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.circle1 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 35px;
+    top: 65px;
+}
+
+.pasindu {
+    position: absolute;
+    left: 70px;
+    top: 60px;
+}
+
+.circle2 {
+    height: 40px;
+    width: 40px;
+    background-color: #24FF00;
+    border-radius: 50%;
+    margin-left: 260px;
+    margin-top: 60px;
+}
+
+.circle2 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 270px;
+    top: 165px;
+}
+.pasindu1{
+    position: absolute;
+    left: 310px;
+    top: 160px;
+}
+.circle3 {
+    height: 40px;
+    width: 40px;
+    background-color: #1E4DF2;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.circle3 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 35px;
+    top: 255px;
+}
+
+.circle5 {
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    width:50px;
+    float: left;
+    height:50px;
+    border-radius: 50px;
+    background-color: brown;
+    /* position: absolute; */
+    /* left: 35px; */
+    /* top: 255px; */
+}
+
+.circle5 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    display: flex;
+    justify-content:center;
+    /* position: absolute;
+    left: 35px;
+    top: 255px; */
+}
+
+.pasindu2 {
+    position: absolute;
+    left: 70px;
+    top: 255px;
+}
+
+.circle4 {
+    height: 40px;
+    width: 40px;
+    background-color: #24FF00;
+    border-radius: 50%;
+    margin-left: 260px;
+    margin-top: 60px;
+}
+
+.circle4 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 270px;
+    top: 355px;
+}
+.pasindu3{
+    position: absolute;
+    left: 310px;
+    top: 355px;
+}
+
+.review-page-main {
+    background-color: #001B36
+    !important;
+}
+
+.circle11 {
+    height: 40px;
+    width: 40px;
+    background-color: #F24E1E;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+.circle11 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 35px;
+    top: 175px;
+}
+
+.pasindu0 {
+    position: absolute;
+    left: 70px;
+    top: 160px;
+}
+
+.circle21 {
+    height: 40px;
+    width: 40px;
+    background-color: #24FF00;
+    border-radius: 50%;
+    margin-left: 260px;
+    margin-top: 60px;
+}
+
+.circle21 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 270px;
+    top: 275px;
+}
+.pasindu11{
+    position: absolute;
+    left: 310px;
+    top: 265px;
+}
+.circle31 {
+    height: 40px;
+    width: 40px;
+    background-color: #1E4DF2;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.circle31 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    position: absolute;
+    left: 35px;
+    top: 365px;
+}
+.pasindu21 {
+    position: absolute;
+    left: 70px;
+    top: 355px;
+}
+.button3 {
+    background-color: #4DACA9 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 150px !important;
+    height: 20px !important;
+    left: 80px;
+}
+
+.button4 {
+    background-color: #4DACA9 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 150px !important;
+    height: 20px !important;
+    left: 180px;
+}
+
+.button5 {
+    background-color: #4DACA9 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 150px !important;
+    height: 20px !important;
+    left: 280px;
+}
+
+.header-btn {
+    display: flex;
+}
+
+.most-relavant {
+    display: flex;
+}
+
+.scanner {
+   
+    margin-left: 250px;
+}
+
+.rectangle {
+    height: 330px;
+    width: 150px;
+    background-color: #004644;
+    -ms-transform: scaleY(1.5); /* IE 9 */
+    transform: scaleY(1.5);
+    opacity: 0.8;
+    margin-left: 240px;
+    margin-top:-330px;
+    /* z-index: -1; */
+  }
+
+  .butt {
+    background-color: #4DACA9 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100px !important;
+    height: 20px !important;
+    left: 25px;
+    top:-30px;
+}
+.qr-logo1 {
+    /* Food Centric logo_transparent 1 */
+
+    /* position: absolute; */
+    width: 150px;
+    height: 130px;
+    margin-top: -20px;
+    /* left: 20px;
+    top: 220px; */
+    /* filter: brightness(5%); */
+}
+.p2 {
+    /* z-index: -1; */
+}
 .home-header {
     background-color:#004644 !important;
     height: 100px;
@@ -869,3 +1287,12 @@ td, th {
     justify-content:center;
     color: red;
 }
+
+.result{
+    background-color: green;
+    color:#fff;
+    padding:20px;
+  }
+  .row-qr{
+    display:flex;
+  }
