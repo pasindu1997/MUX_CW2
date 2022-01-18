@@ -525,6 +525,20 @@ body {
     margin-bottom: 30px;
 }
 
+.add-to-cart-div {
+    position: absolute;
+    /* left:90px; */
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px #888888;
+    background-color: white;
+}
+
+.checoutvalue-width {
+    width: 97% !important;
+}
+
 .favorite-div {
     position: absolute;
     /* left:90px; */

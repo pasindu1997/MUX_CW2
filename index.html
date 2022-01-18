@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -338,6 +339,7 @@
             <div class="home-welcome-div favorite-welcome">
                 <h1>Favorite List</h1>
                 <p>Here is what you love</p>
+                <a href="#cart">cart</a>
             </div>
         </div>
         <div class="food-item-list-no-scroll ui-grid-b" id="favFoodItemsPage">
@@ -490,238 +492,23 @@
             <div class="home-welcome-div">
                 <h1>My Cart</h1>
             </div>
-            <div class="cart-item-list">
-                <div class="col">
-                    <div class="cart-item-card">
-                        <div class="row">
-                            <div class="cart-div" >
-                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
-                            </div>
-                            <div>
-                                <img src="./images/cart-images/randc.png" />
-                                <div class="cart-card-content">
-                                    <h5>Rice and Curry</h5>
-                                    <p>
-                                        Dictum tortor nunc nibh egestas
-                                    </p>
-                                    <fieldset class="row fieldset" >
-                                        <div class="extra1">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
-                                            <label for="extra1"> Spicy++</label>
-                                        </div>
-                                        <div class="extra2">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
-                                            <label for="extra2"> Cheese++</label>
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
+            <div class="cart-item-list" id="cardItemList">
+                <div class="col" id="cardItemListCol1">
+                    
+                </div>
+                <div class="col" id="cardItemListCol2">
 
-                                        <h4>
-                                            Rs. 250
-                                        </h4>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input data-role="none" type="text" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="cart-item-card">
-                        <div class="row">
-                            <div class="cart-div" >
-                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
-                            </div>
-                            <div>
-                                <img src="./images/cart-images/randc.png" />
-                                <div class="cart-card-content">
-                                    <h5>Rice and Curry</h5>
-                                    <p>
-                                        Dictum tortor nunc nibh egestas
-                                    </p>
-                                    <fieldset class="row fieldset" >
-                                        <div class="extra1">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
-                                            <label for="extra1"> Spicy++</label>
-                                        </div>
-                                        <div class="extra2">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
-                                            <label for="extra2"> Cheese++</label>
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
-
-                                        <h4>
-                                            Rs. 250
-                                        </h4>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input data-role="none" type="text" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="cart-item-card">
-                        <div class="row">
-                            <div class="cart-div" >
-                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
-                            </div>
-                            <div>
-                                <img src="./images/cart-images/randc.png" />
-                                <div class="cart-card-content">
-                                    <h5>Rice and Curry</h5>
-                                    <p>
-                                        Dictum tortor nunc nibh egestas
-                                    </p>
-                                    <fieldset class="row fieldset" >
-                                        <div class="extra1">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
-                                            <label for="extra1"> Spicy++</label>
-                                        </div>
-                                        <div class="extra2">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
-                                            <label for="extra2"> Cheese++</label>
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
-
-                                        <h4>
-                                            Rs. 250
-                                        </h4>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input data-role="none" type="text" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <div class="col">
-                    <div class="cart-item-card">
-                        <div class="row">
-                            <div class="cart-div" >
-                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
-                            </div>
-                            <div>
-                                <img src="./images/cart-images/randc.png" />
-                                <div class="cart-card-content">
-                                    <h5>Rice and Curry</h5>
-                                    <p>
-                                        Dictum tortor nunc nibh egestas
-                                    </p>
-                                    <fieldset class="row fieldset" >
-                                        <div class="extra1">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
-                                            <label for="extra1"> Spicy++</label>
-                                        </div>
-                                        <div class="extra2">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
-                                            <label for="extra2"> Cheese++</label>
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
-
-                                        <h4>
-                                            Rs. 250
-                                        </h4>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input data-role="none" type="text" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="cart-item-card">
-                        <div class="row">
-                            <div class="cart-div" >
-                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
-                            </div>
-                            <div>
-                                <img src="./images/cart-images/randc.png" />
-                                <div class="cart-card-content">
-                                    <h5>Rice and Curry</h5>
-                                    <p>
-                                        Dictum tortor nunc nibh egestas
-                                    </p>
-                                    <fieldset class="row fieldset" >
-                                        <div class="extra1">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
-                                            <label for="extra1"> Spicy++</label>
-                                        </div>
-                                        <div class="extra2">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
-                                            <label for="extra2"> Cheese++</label>
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
-
-                                        <h4>
-                                            Rs. 250
-                                        </h4>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input data-role="none" type="text" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="cart-item-card">
-                        <div class="row">
-                            <div class="cart-div" >
-                                <span class="iconify favorite-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;"></span>
-                            </div>
-                            <div>
-                                <img src="./images/cart-images/randc.png" />
-                                <div class="cart-card-content">
-                                    <h5>Rice and Curry</h5>
-                                    <p>
-                                        Dictum tortor nunc nibh egestas
-                                    </p>
-                                    <fieldset class="row fieldset" >
-                                        <div class="extra1">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra1" name="" value="Bike"/>
-                                            <label for="extra1"> Spicy++</label>
-                                        </div>
-                                        <div class="extra2">
-                                            <input data-role="none" class="cart-card-input" type="checkbox" id="extra2" name="extra2" value="Bike"/>
-                                            <label for="extra2"> Cheese++</label>
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
-
-                                        <h4>
-                                            Rs. 250
-                                        </h4>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input data-role="none" type="text" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
+                </div>
             </div>
             <div class="cart-checkout">
                 <table class="checkout-table">
                     <tr>
                         <td>Subtotal</td>
-                        <td>LKR 6500</td>
+                        <td id="subtotal"></td>
                     </tr>
                     <tr>
-                        <td>TAX & Extras</td>
-                        <td>LKR 700</td>
+                        <td>TAX</td>
+                        <td id="tax"></td>
                     </tr>
                     <tr>
                         <td>Delievery</td>
@@ -735,7 +522,7 @@
                     <tr>
                         
                         <td>Total</td>
-                        <td>LKR 7250</td>
+                        <td id="total"></td>
                     </tr>
                 </table>
                 <div class="cart-checkout-btn-div">
@@ -773,8 +560,7 @@
                 <div class="checkout-sub-heaers">
                     <h3>Payment method</h3>
                 </div>
-                <div>
-                    <input class="mb-0" type="text" placeholder="Coupon code" style="font-family:Arial, FontAwesome" disabled value="LKR 7250 - Stripe" />
+                <div id="checkoutValue">
                 </div>
             </div>
             <div class="coupon-code">
@@ -796,8 +582,43 @@
                     <input class="mb-0" type="text" placeholder="Enter your note" style="font-family:Arial, FontAwesome" />
                 </div>
                 <div class="cart-checkout-btn-div">
-                    <a href="#checkout" data-transition="slide" class="ui-btn cart-checkout-btn mt-cp" >Confirm And Pay</a>
+                    <a href="#" id="checkoutAndPay" data-transition="slide" class="ui-btn cart-checkout-btn mt-cp" >Confirm And Pay</a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    // email-confirmation
+    <div data-role="page" id="order-confirmation" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>Order Confirmation</h1>
+            </div>
+            <div class="email-sent">
+                <img src="images/background/order-confirmation.png" />
+            </div>
+            <div class="email-sent-content">
+                <h2>Your order is confirmed! <br/><p style="font-size:16px"> Order Number: #9464365</p>
+                    <br/>
+                    <p style="font-size:16px"> Your earned coupon points for this order!</p>
+                    <p style="font-size:16px"> Please check your goals page</p>
+                </h2>
+            </div>
+            <div class="email-sent-content">
+               <a class="ui-btn back-to-home" style="margin: 0 !important;" href="#potrait-home" >
+                        Back To Home
+                </a>
             </div>
         </div>
     </div>
