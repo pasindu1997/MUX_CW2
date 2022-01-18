@@ -60,6 +60,25 @@ window.onclick = function (event) {
     }
 }
 
+const navigationBar = () => {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    console.log(x.style.display)
+}
+
+const navigationBarLand = () => {
+    var x = document.getElementById("navBarLand");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 const handleFavorite = (id) => {
     if ($(`#addToFavorite${id}`).css("background-color") === "rgb(255, 255, 255)") {
         $(`#addToFavorite${id}`).css("background-color", "#E84C4F");
@@ -551,20 +570,6 @@ $(document).ready(function () {
 
     document.getElementById('food-item-list').innerHTML = foodItemsHtml
 
-    // $('.minus').click(function () {
-    //     var $input = $(this).parent().find('input');
-    //     var count = parseInt($input.val()) - 1;
-    //     count = count < 1 ? 1 : count;
-    //     $input.val(count);
-    //     $input.change();
-    //     return false;
-    // });
-    // $('.plus').click(function () {
-    //     var $input = $(this).parent().find('input');
-    //     $input.val(parseInt($input.val()) + 1);
-    //     $input.change();
-    //     return false;
-    // });
 
     $('#login-button').click(function () {
         var userName = $('#login-username-input').val();

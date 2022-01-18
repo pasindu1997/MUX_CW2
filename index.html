@@ -206,21 +206,19 @@
                 <img class="login-register-logo" src="./images/logo/Food Centric-logos_transparent.png" />
                 <div class="register-input-div">
                     <div class="register-input">
-
                         <input class="mb-0" type="text" placeholder="  &#xf2c0;   Username" style="font-family:Arial, FontAwesome" />
                     </div>
                     <div  class="register-input">
-                        
                         <input class="mb-0" type="text" placeholder="  &#xf10b;   Contact Number" style="font-family:Arial, FontAwesome" />
                     </div>
                     <div  class="register-input">
                         <input class="mb-0" type="text" placeholder="  &#xf0e0;   Email Address" style="font-family:Arial, FontAwesome" />
                     </div>
                     <div  class="register-input">
-                        <input class="mb-0" type="text" placeholder="  &#xf023;   Password" style="font-family:Arial, FontAwesome" />
+                        <input class="mb-0" type="password" placeholder="  &#xf023;   Password" style="font-family:Arial, FontAwesome" />
                     </div>
                     <div  class="register-input">
-                        <input class="mb-0" type="text" placeholder="  &#xf023;   Confirm Password" style="font-family:Arial, FontAwesome" /> -->
+                        <input class="mb-0" type="password" placeholder="  &#xf023;   Confirm Password" style="font-family:Arial, FontAwesome" /> -->
                     </div>
                 </div>
                 <div class="register-div">
@@ -271,33 +269,42 @@
     <!-- food item details page -->
     <div data-role="page" id="food-item-details" class="food-item-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
-            <div class="ui-block-a">
+             <div>
+                 <a href="javascript:void(0);" class="icon" onclick="navigationBarLand()">
+                     <span class="iconify ham-rav" data-icon="bx:bx-menu" style="color: white;" data-width="50" data-height="50"></span>
+                 </a>
+                 <a href="#qr-promotion" data-transition="slide">
+
+                     <span class="iconify ham-rav" data-icon="bi:qr-code-scan" style="color: white; margin-right: 20px;" data-width="50" data-height="50"></span>
+                 </a>
+                <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">FOOD ITEM DETAILS
+                </p>
             </div>
             <div class="ui-block-b center">
-                <p style="color: white;">FOOD ITEM DETAILS
-                </p>
             </div>
         </div>
         <div data-role="main" >
+           
             <div class="food-item">
                 <img class="item-food1" src="./images/foods/1.jpg" />
                 <p class="p1">
                     CREAMY MUSHROOM PASTA
-                    <a href="#comment-page">
+                    <a href="#comment-page" data-transition="slide">
 
                         <span style="margin-left: 125px" class="iconify" data-icon="icons8:comments"></span>
                     </a>
                     <br>
-                    Rs 750.00<br>
-                    Rate this meal<br>
-                    (5.0)
+                    <span style="color:#FF0000">Rs 750.00</span><br>
+                    <span style="color:#0FA958">Rate this meal</span><br>
+                    <span style="color:#041DFF">(5.0)</span>
                     <span id="star1" class="fa fa-star"></span>
                     <span id="star2" class="fa fa-star"></span>
                     <span id="star3" class="fa fa-star"></span>
                     <span id="star4" class="fa fa-star"></span>
-                    <span id="star5" class="fa fa-star"></span>(14 reviews)
+                    <span id="star5" class="fa fa-star"></span><span style="color:#041DFF">(14 reviews)</span>
                     <br>
-                    <a class="ui-btn button2" href="#review-page">Write a review</a>
+                    <a class="ui-btn button2" href="#review-page" data-transition="slide">Write a review</a>
                     FOOD DESCRIPTION : This creamy mushroom pasta is a rich,<br> umami-filled delight that cooks quickly and easily in one pot.<br> 
                     
                 </p>
@@ -312,17 +319,35 @@
                     <button class="button">ADD TO CART</button>
                 </p>
             </div>
+             <div class="rectangle-land" id="navBarLand">
+                <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                <button class="butt">HOME</button>
+                <button class="butt">SEARCH</button>
+                <button class="butt">CATEGORIES</button>
+                <button class="butt">CART</button>
+                <button class="butt">PROFILE</button>
+                <button class="butt">ABOUT US</button>
+                <button class="butt">HELP</button>
+                <button class="butt">SETTING</button>
+                <button class="butt">LOG OUT</button>
+            </div>
         </div>
     </div>
 
      <!-- QR Promotion page -->
      <div data-role="page" id="qr-promotion" class="qr-promotion-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
-            <div class="ui-block-a">
+             <div>
+                 <a href="#food-item-details">
+                     <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                 </a>
+                 <a href="#scan-page" data-transition="slide">
+                     <span class="iconify ham-rav" data-icon="bx:bx-scan" style="color: white;" data-width="50" data-height="50"></span>
+                 </a>
+                <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">QR PROMOTIONS
+                </p>
             </div>
             <div class="ui-block-b center">
-                <p style="color: white;">QR PROMOTIONS
-                </p>
             </div>
         </div>
         <div data-role="main">
@@ -338,6 +363,10 @@
      <div data-role="page" id="comment-page" class="comment-page-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
             <div class="ui-block-a">
+                <a href="#food-item-details" data-rel="back">
+
+                    <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                </a>
             </div>
             <div class="ui-block-b center">
                 <p style="color: white;">COMMENTS
@@ -345,6 +374,18 @@
             </div>
         </div>
         <div data-role="main" id="commentPageMain">
+            <div class="rectangle" id="myLinks" >
+                <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                <button class="butt">HOME</button>
+                <button class="butt">SEARCH</button>
+                <button class="butt">CATEGORIES</button>
+                <button class="butt">CART</button>
+                <button class="butt">PROFILE</button>
+                <button class="butt">ABOUT US</button>
+                <button class="butt">HELP</button>
+                <button class="butt">SETTING</button>
+                <button class="butt">LOG OUT</button>
+            </div>
             <div class="circle1">
                 <p>P</p>
             </div>
@@ -380,11 +421,14 @@
     <!--review page -->
     <div data-role="page" id="review-page" class="review-page-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
-            <div class="ui-block-a">
+            <div>
+                <a href="#food-item-details" data-rel="back">
+                    <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                </a>
+                <p style="display: flex; justify-content: center; padding-top: 20px; color: white; margin: 0 !important;">Reviews
+                </p>
             </div>
             <div class="ui-block-b center">
-                <p style="color: white;">REVIEWS
-                </p>
             </div>
         </div>
         <div data-role="main">
@@ -427,11 +471,14 @@
     <!--scan page -->
     <div data-role="page" id="scan-page" class="scan-page-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
-            <div class="ui-block-a">
+           <div>
+               <a href="#qr-promotion" data-rel="back">
+                   <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+               </a>
+                <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">SCAN QR CODE
+                </p>
             </div>
             <div class="ui-block-b center">
-                <p style="color: white;">SCAN QR CODE
-                </p>
             </div>
         </div>
         <div data-role="main">
@@ -440,7 +487,7 @@
                     <div id="reader" style="width:500px;"></div>
                 </div>
                 <div class="col" style="padding:30px;">
-                    <h4>SCAN RESULT</h4>
+                    <h4>Promotion</h4>
                     <div id="result">
                     </div>
                 </div>
@@ -449,69 +496,17 @@
         </div>
     </div>
 
-    <!-- food item details navigation page -->
-    <div data-role="page" id="food-item-details-navigation" class="food-item-main">
-        <div data-role="header" data-position="fixed" class="ui-grid-a header">
-            <div class="ui-block-a">
-            </div>
-            <div class="ui-block-b center">
-                <p style="color: white;">FOOD ITEM DETAILS
-                </p>
-            </div>
-        </div>
-        <div data-role="main" >
-
-            <div class="food-item">
-                <img class="item-food1" src="./images/foods/1.jpg" />
-                <p class="p1">CREAMY MUSHROOM PASTA<br>
-                    Rs 750.00<br>
-                    Rate this meal<br>
-                    (5.0)
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>(14 reviews)
-                    <br>
-                    <button class="button2">Write a review</button>
-                    FOOD DESCRIPTION : This creamy mushroom pasta is a rich,<br> umami-filled delight that cooks quickly and easily in one pot.<br> 
-                    
-                </p>
-                
-            </div>
-            <div class="food-item2">
-                <div class="rectangle">
-
-                    <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
-                    <button class="butt">HOME</button>
-                    <button class="butt">SEARCH</button>
-                    <button class="butt">CATEGORIES</button>
-                    <button class="butt">CART</button>
-                    <button class="butt">PROFILE</button>
-                    <button class="butt">ABOUT US</button>
-                    <button class="butt">HELP</button>
-                    <button class="butt">SETTING</button>
-                    <button class="butt">LOG OUT</button>
-                </div>
-                
-                <img class="item-food2" src="./images/foods/2.jpg" />
-                <p class="p2">FOOD PICASSO<br>
-                    HOURS : 8 am - 9 pm  OPEN<br>
-                    ADDRESS: Second Lane , Egodwatta, Boralesgamuwa<br>
-                    PHONE: 0774566541<br>
-                    <button class="button">ADD TO CART</button>
-                </p>
-            </div>
-        </div>
-    </div>
-
     <!-- potrait home -->
     <div data-role="page" id="potrait-home" class="home-background">
         <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
             <div>
                 <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
-                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
-                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+                <a href="javascript:void(0);" class="icon" onclick="navigationBar()">
+                    <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                </a>
+                <a href="#qr-promotion">
+                    <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+                </a>
             </div>
             <div class="ui-block-b center">
                 <p class="header-block-two">
@@ -519,6 +514,18 @@
             </div>
         </div>
         <div data-role="main" class="home-main">
+            <div class="rectangle" id="myLinks" >
+                <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                <button class="butt">HOME</button>
+                <button class="butt">SEARCH</button>
+                <button class="butt">CATEGORIES</button>
+                <button class="butt">CART</button>
+                <button class="butt">PROFILE</button>
+                <button class="butt">ABOUT US</button>
+                <button class="butt">HELP</button>
+                <button class="butt">SETTING</button>
+                <button class="butt">LOG OUT</button>
+            </div>
             <div class="home-welcome-div">
                 <h1>Hi Pasindu,</h1>
                 <p>Time to grab a meal</p>
