@@ -272,8 +272,14 @@
     <div data-role="page" id="food-item-details" class="food-item-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
              <div>
+                 <a href="javascript:void(0);" class="icon" onclick="navigationBarLand()">
+                     <span class="iconify ham-rav" data-icon="bx:bx-menu" style="color: white;" data-width="50" data-height="50"></span>
+                 </a>
+                 <a href="#qr-promotion" data-transition="slide">
+
+                     <span class="iconify ham-rav" data-icon="bi:qr-code-scan" style="color: white; margin-right: 20px;" data-width="50" data-height="50"></span>
+                 </a>
                 <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
-                <span class="iconify ham-rav" data-icon="bx:bx-menu" style="color: white;" data-width="50" data-height="50"></span>
                 <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">FOOD ITEM DETAILS
                 </p>
             </div>
@@ -281,11 +287,12 @@
             </div>
         </div>
         <div data-role="main" >
+           
             <div class="food-item">
                 <img class="item-food1" src="./images/foods/1.jpg" />
                 <p class="p1">
                     CREAMY MUSHROOM PASTA
-                    <a href="#comment-page">
+                    <a href="#comment-page" data-transition="slide">
 
                         <span style="margin-left: 125px" class="iconify" data-icon="icons8:comments"></span>
                     </a>
@@ -299,7 +306,7 @@
                     <span id="star4" class="fa fa-star"></span>
                     <span id="star5" class="fa fa-star"></span><span style="color:#041DFF">(14 reviews)</span>
                     <br>
-                    <a class="ui-btn button2" href="#review-page">Write a review</a>
+                    <a class="ui-btn button2" href="#review-page" data-transition="slide">Write a review</a>
                     FOOD DESCRIPTION : This creamy mushroom pasta is a rich,<br> umami-filled delight that cooks quickly and easily in one pot.<br> 
                     
                 </p>
@@ -314,6 +321,18 @@
                     <button class="button">ADD TO CART</button>
                 </p>
             </div>
+             <div class="rectangle-land" id="navBarLand">
+                <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                <button class="butt">HOME</button>
+                <button class="butt">SEARCH</button>
+                <button class="butt">CATEGORIES</button>
+                <button class="butt">CART</button>
+                <button class="butt">PROFILE</button>
+                <button class="butt">ABOUT US</button>
+                <button class="butt">HELP</button>
+                <button class="butt">SETTING</button>
+                <button class="butt">LOG OUT</button>
+            </div>
         </div>
     </div>
 
@@ -321,8 +340,12 @@
      <div data-role="page" id="qr-promotion" class="qr-promotion-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
              <div>
-                <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
-                <span class="iconify ham-rav" data-icon="bx:bx-scan" style="color: white;" data-width="50" data-height="50"></span>
+                 <a href="#food-item-details" data-rel="back">
+                     <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                 </a>
+                 <a href="#scan-page" data-transition="slide">
+                     <span class="iconify ham-rav" data-icon="bx:bx-scan" style="color: white;" data-width="50" data-height="50"></span>
+                 </a>
                 <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">QR PROMOTIONS
                 </p>
             </div>
@@ -342,7 +365,10 @@
      <div data-role="page" id="comment-page" class="comment-page-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
             <div class="ui-block-a">
-                <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                <a href="#food-item-details" data-rel="back">
+
+                    <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                </a>
             </div>
             <div class="ui-block-b center">
                 <p style="color: white;">COMMENTS
@@ -350,6 +376,18 @@
             </div>
         </div>
         <div data-role="main" id="commentPageMain">
+            <div class="rectangle" id="myLinks" >
+                <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                <button class="butt">HOME</button>
+                <button class="butt">SEARCH</button>
+                <button class="butt">CATEGORIES</button>
+                <button class="butt">CART</button>
+                <button class="butt">PROFILE</button>
+                <button class="butt">ABOUT US</button>
+                <button class="butt">HELP</button>
+                <button class="butt">SETTING</button>
+                <button class="butt">LOG OUT</button>
+            </div>
             <div class="circle1">
                 <p>P</p>
             </div>
@@ -386,8 +424,10 @@
     <div data-role="page" id="review-page" class="review-page-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
             <div>
-                <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
-                <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">Reviews
+                <a href="#food-item-details" data-rel="back">
+                    <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+                </a>
+                <p style="display: flex; justify-content: center; padding-top: 20px; color: white; margin: 0 !important;">Reviews
                 </p>
             </div>
             <div class="ui-block-b center">
@@ -434,7 +474,9 @@
     <div data-role="page" id="scan-page" class="scan-page-main">
         <div data-role="header" data-position="fixed" class="ui-grid-a header">
            <div>
-                <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+               <a href="#qr-promotion" data-rel="back">
+                   <span class="iconify arrow-rav" data-icon="bx:bx-arrow-back" style="color: white;" data-width="50" data-height="50"></span>
+               </a>
                 <p style="display: flex; justify-content: center; padding-top: 20px; color: white;">SCAN QR CODE
                 </p>
             </div>
@@ -453,62 +495,6 @@
                 </div>
             </div>
             
-        </div>
-    </div>
-
-    <!-- food item details navigation page -->
-    <div data-role="page" id="food-item-details-navigation" class="food-item-main">
-        <div data-role="header" data-position="fixed" class="ui-grid-a header">
-            <div class="ui-block-a">
-            </div>
-            <div class="ui-block-b center">
-                <p style="color: white;">FOOD ITEM DETAILS
-                </p>
-            </div>
-        </div>
-        <div data-role="main" >
-
-            <div class="food-item">
-                <img class="item-food1" src="./images/foods/1.jpg" />
-                <p class="p1">CREAMY MUSHROOM PASTA<br>
-                    Rs 750.00<br>
-                    Rate this meal<br>
-                    (5.0)
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>(14 reviews)
-                    <br>
-                    <button class="button2">Write a review</button>
-                    FOOD DESCRIPTION : This creamy mushroom pasta is a rich,<br> umami-filled delight that cooks quickly and easily in one pot.<br> 
-                    
-                </p>
-                
-            </div>
-            <div class="food-item2">
-                <div class="rectangle">
-
-                    <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
-                    <button class="butt">HOME</button>
-                    <button class="butt">SEARCH</button>
-                    <button class="butt">CATEGORIES</button>
-                    <button class="butt">CART</button>
-                    <button class="butt">PROFILE</button>
-                    <button class="butt">ABOUT US</button>
-                    <button class="butt">HELP</button>
-                    <button class="butt">SETTING</button>
-                    <button class="butt">LOG OUT</button>
-                </div>
-                
-                <img class="item-food2" src="./images/foods/2.jpg" />
-                <p class="p2">FOOD PICASSO<br>
-                    HOURS : 8 am - 9 pm  OPEN<br>
-                    ADDRESS: Second Lane , Egodwatta, Boralesgamuwa<br>
-                    PHONE: 0774566541<br>
-                    <button class="button">ADD TO CART</button>
-                </p>
-            </div>
         </div>
     </div>
 
@@ -535,17 +521,17 @@
         </div>
         <div data-role="main" class="home-main">
             <div class="rectangle" id="myLinks" >
-                    <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
-                    <button class="butt">HOME</button>
-                    <button class="butt">SEARCH</button>
-                    <button class="butt">CATEGORIES</button>
-                    <button class="butt">CART</button>
-                    <button class="butt">PROFILE</button>
-                    <button class="butt">ABOUT US</button>
-                    <button class="butt">HELP</button>
-                    <button class="butt">SETTING</button>
-                    <button class="butt">LOG OUT</button>
-                </div>
+                <img class="qr-logo1" src="./images/logo/Food Centric-logos_transparent.png" />
+                <button class="butt">HOME</button>
+                <button class="butt">SEARCH</button>
+                <button class="butt">CATEGORIES</button>
+                <button class="butt">CART</button>
+                <button class="butt">PROFILE</button>
+                <button class="butt">ABOUT US</button>
+                <button class="butt">HELP</button>
+                <button class="butt">SETTING</button>
+                <button class="butt">LOG OUT</button>
+            </div>
             <div class="home-welcome-div">
                 <h1>Hi Pasindu,</h1>
                 <p>Time to grab a meal</p>

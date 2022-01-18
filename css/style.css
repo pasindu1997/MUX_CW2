@@ -1321,6 +1321,10 @@ td, th {
   display: none;
 }
 
+#navBarLand {
+  display: none;
+}
+
 /* Style navigation menu links */
 .topnav a {
   color: white;
@@ -1355,6 +1359,19 @@ td, th {
     opacity: 0.8;
     margin-left: 240px;
     margin-top:65px;
+    z-index: 1;
+  }
+  
+  .rectangle-land {
+    /* position: fixed; */
+    height: 321px;
+    width: 165px;
+    background-color: #004644;
+    -ms-transform: scaleY(1.5);
+    transform: scaleY(1.5);
+    opacity: 0.8;
+    margin-left: 682px;
+    margin-top: -327px;
     z-index: 1;
   }
 

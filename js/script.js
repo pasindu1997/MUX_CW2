@@ -70,6 +70,15 @@ const navigationBar = () => {
     }
 }
 
+const navigationBarLand = () => {
+    var x = document.getElementById("navBarLand");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 const handleFavorite = (id) => {
     if ($(`#addToFavorite${id}`).css("background-color") === "rgb(255, 255, 255)") {
         $(`#addToFavorite${id}`).css("background-color", "#E84C4F");
