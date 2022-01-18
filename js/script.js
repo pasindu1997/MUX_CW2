@@ -342,6 +342,23 @@ const handleMinus = (id) => {
 //new one
 $(document).ready(function () {
 
+    $('#addComment').on('click', function () {
+        var comment = $('#commentText').val();
+        $('#newCommentSection').append(`
+            <div>
+                <hr>
+                <div class="circle5">
+                    <p>K</p>
+                </div>
+                <div style="margin-left: 20px">
+                    <p style="color: white;">Ravindu Kithmini 09/08/2021  8.56 am<br>${comment}<br></p>   
+                </div>
+                <br><br>
+            </div> 
+        `);
+        $('#commentText').val('');
+    })
+
     var checkoutTotal = JSON.parse(window.localStorage.getItem("checkoutTotal"));
     $('#checkoutAndPay').on('click', function () {
 

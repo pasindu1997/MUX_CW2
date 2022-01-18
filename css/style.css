@@ -516,6 +516,32 @@ color: white;
     left: 35px;
     top: 255px;
 }
+
+.circle5 {
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    width:50px;
+    float: left;
+    height:50px;
+    border-radius: 50px;
+    background-color: brown;
+    /* position: absolute; */
+    /* left: 35px; */
+    /* top: 255px; */
+}
+
+.circle5 p{
+    color:white;
+    text-transform: uppercase;
+    font-size:18px;
+    display: flex;
+    justify-content:center;
+    /* position: absolute;
+    left: 35px;
+    top: 255px; */
+}
+
 .pasindu2 {
     position: absolute;
     left: 70px;
