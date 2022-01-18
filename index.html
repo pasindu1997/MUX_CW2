@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="js/html5-qrcode.min_.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -433,11 +435,16 @@
             </div>
         </div>
         <div data-role="main">
-            <div class="qr-scan">
-                <img class="qr-scan1" src="./images/foods/5.JPG" />
-                <div class="rectangle"></div>
-                
-            </div> 
+            <div class="row-qr">
+                <div class="col">
+                    <div id="reader" style="width:500px;"></div>
+                </div>
+                <div class="col" style="padding:30px;">
+                    <h4>SCAN RESULT</h4>
+                    <div id="result">
+                    </div>
+                </div>
+            </div>
             
         </div>
     </div>

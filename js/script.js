@@ -212,23 +212,23 @@ const renderFavListHome = () => {
 
             favPageHtml = favPageHtml + `
                 <div class="favorite-item-card ui-block-b">
-                <div class="favorite-div" id="addToFavorite${element.id}" onclick="handleFavorite(${element.id})">
-                    <span id="favoriteIcon${element.id}" class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                    <div class="favorite-div" id="addToFavorite${element.id}" onclick="handleFavorite(${element.id})">
+                        <span id="favoriteIcon${element.id}" class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                    </div>
+                    <div class="add-to-cart-div" id="addToCart${element.id}" onclick="handleAddCart(${element.id})">
+                        <span  id="cartIcon${element.id}" class="iconify delete-icon" data-icon="ant-design:shopping-cart-outlined"></span>
+                    </div>
+                    <div>
+                        <img src=${element.imgSrc} />
+                        <h5>${element.name}</h5>
+                        <p>
+                            ${element.description}
+                        </p>
+                        <h4>
+                        LKR ${element.price}
+                        </h4>
+                    </div>
                 </div>
-                <div class="add-to-cart-div" id="addToCart${element.id}" onclick="handleAddCart(${element.id})">
-                    <span  id="cartIcon${element.id}" class="iconify delete-icon" data-icon="ant-design:shopping-cart-outlined"></span>
-                </div>
-                <div>
-                    <img src=${element.imgSrc} />
-                    <h5>${element.name}</h5>
-                    <p>
-                         ${element.description}
-                    </p>
-                    <h4>
-                       LKR ${element.price}
-                    </h4>
-                </div>
-            </div>
             `;
         });
 
@@ -353,6 +353,48 @@ const resetAllRating = () => {
 
 //new one
 $(document).ready(function () {
+    function onScanSuccess(qrCodeMessage) {
+        // console.log(qrCodeMessage)
+        var decodeMessage = qrCodeMessage.split('/');
+        console.log(decodeMessage)
+        const itemsIds = [parseInt(decodeMessage[3]), parseInt(decodeMessage[4])];
+        var items = [];
+        itemsIds.forEach(element => {
+            var newItem = foodItem.find(item => item.id === element);
+            console.log(newItem)
+            items.push(newItem);
+        });
+        items.forEach(item => {
+            $('#result').append(`
+                <div class="favorite-item-card ui-block-b">
+                    <div>
+                        <img src=${item.imgSrc} />
+                        <h5>${item.name}</h5>
+                        <p>
+                                ${item.description}
+                        </p>
+                        <h4>
+                            LKR ${item.price}
+                        </h4>
+                    </div>
+                </div>
+            `)
+        })
+        // document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
+        console.log(items)
+        // var idArray = JSON.parse(qrCodeMessage);
+        // console.log(idArray)
+
+    }
+
+    function onScanError(errorMessage) {
+        console.warn(errorMessage);
+    }
+
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+        "reader", { fps: 10, qrbox: 250 });
+    html5QrcodeScanner.render(onScanSuccess, onScanError);
+
     $('#star3').on('click', function () {
         resetAllRating();
         if ($(this).attr('class') === 'fa fa-star') {
