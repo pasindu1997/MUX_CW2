@@ -333,7 +333,7 @@ body {
 
     /* position: absolute; */
     width: 414px;
-    height: 175px;
+    height: 154px;
     /* left: 40px; */
     /* top: 30px; */
 
@@ -766,10 +766,18 @@ color: white;
     margin-right: 10px;
 }
 
+.arrow-rav {
+    float: left;
+}
+.ham-rav {
+     float: right;
+}
+
 .qr-icon {
     margin-top: 39px;
     margin-left: 10px;
 }
+
 
 .home-welcome-div {
     margin: 15px 0 0 15px;
