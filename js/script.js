@@ -339,8 +339,90 @@ const handleMinus = (id) => {
     return false;
 }
 
+const handleRatingMessage = () => {
+    alert("Thank you for rating our product")
+}
+
+const resetAllRating = () => {
+    $('#star1').removeClass('checked');
+    $('#star2').removeClass('checked');
+    $('#star3').removeClass('checked');
+    $('#star4').removeClass('checked');
+    $('#star5').removeClass('checked');
+}
+
 //new one
 $(document).ready(function () {
+    $('#star3').on('click', function () {
+        resetAllRating();
+        if ($(this).attr('class') === 'fa fa-star') {
+            $('#star1').addClass('checked')
+            $('#star2').addClass('checked')
+            $(this).addClass('checked')
+        } else {
+            $('#star1').removeClass('checked')
+            $('#star2').removeClass('checked')
+            $(this).removeClass('checked')
+        }
+        handleRatingMessage();
+    })
+
+    $('#star1').on('click', function () {
+        resetAllRating();
+        if ($(this).attr('class') === 'fa fa-star') {
+            $(this).addClass('checked')
+        } else {
+            $(this).removeClass('checked')
+        }
+        handleRatingMessage();
+    })
+
+    $('#star2').on('click', function () {
+        resetAllRating();
+        if ($(this).attr('class') === 'fa fa-star') {
+            $('#star1').addClass('checked')
+            $(this).addClass('checked')
+        } else {
+            $('#star1').removeClass('checked')
+            $(this).removeClass('checked')
+        }
+        handleRatingMessage();
+    })
+
+    $('#star4').on('click', function () {
+        resetAllRating();
+        if ($(this).attr('class') === 'fa fa-star') {
+            $('#star1').addClass('checked')
+            $('#star2').addClass('checked')
+            $('#star3').addClass('checked')
+            $(this).addClass('checked')
+        } else {
+            $('#star1').removeClass('checked')
+            $('#star2').removeClass('checked')
+            $('#star3').removeClass('checked')
+            $(this).removeClass('checked')
+        }
+        handleRatingMessage();
+    })
+
+    $('#star5').on('click', function () {
+        resetAllRating();
+        if ($(this).attr('class') === 'fa fa-star') {
+            $('#star1').addClass('checked')
+            $('#star2').addClass('checked')
+            $('#star3').addClass('checked')
+            $('#star4').addClass('checked')
+            $(this).addClass('checked')
+        } else {
+            $('#star1').removeClass('checked')
+            $('#star2').removeClass('checked')
+            $('#star3').removeClass('checked')
+            $('#star4').removeClass('checked')
+            $(this).removeClass('checked')
+        }
+        handleRatingMessage();
+    })
+
 
     $('#addComment').on('click', function () {
         var comment = $('#commentText').val();
