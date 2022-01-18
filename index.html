@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="js/script.js"></script>
     <title>Food Centric</title>
 </head>
 <body>
@@ -55,17 +56,20 @@
         <div data-role="main">
             <div  class="main-login">
                 <img class="login-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <div class="error-message-div" id="error-message-div">
+                   
+                </div>
                 <div class="login-username-div">
-                    <input  class="login-username-input" type="text" placeholder="  &#xf2c0;   Username" style="font-family:Arial, FontAwesome" />
+                    <input  class="login-username-input" id="login-username-input" type="text" placeholder="  &#xf2c0;   Username" style="font-family:Arial, FontAwesome" />
                 </div>
                 <div class="login-password-div">
-                    <input  class="login-password-input" type="text" placeholder="  &#xf023;   Password" style="font-family:Arial, FontAwesome" />
+                    <input  class="login-password-input" id="login-password-input" type="password" placeholder="  &#xf023;   Password" style="font-family:Arial, FontAwesome" />
                 </div>
                 <div class="forget-password-div">
                     <a href="#forget-password" data-transition="slide" class="forget-password-btn" >Forget Password?</a>
                 </div>
                 <div class="login-div">
-                    <a href="#introductory" data-transition="slide" class="ui-btn login-btn" >Login</a>
+                    <a id="login-button" data-transition="slide" class="ui-btn login-btn" >Login</a>
                 </div>
                 <div class="sign-up-div">
                     <h4 class="sign-up-h4">Do not have an account?&nbsp;&nbsp; <a href="#register"  data-transition="slideup" class="sign-up-a">Sign Up</a></h4>
@@ -86,7 +90,7 @@
         </div>
         <div data-role="main">
             <div  class="main-login">
-                <div class="intro-welcome-div">
+                <div id="intro-welcome" class="intro-welcome-div">
                     <h1>Hi Pasindu,</h1>
                     <p>Welcome onboard</p>
 
@@ -176,7 +180,7 @@
                         <a href="#introductory" class="ui-btn gps-btn" >Turn on GPS</a>
                     </div>
                     <div class="skip-gps-div">
-                        <a class="ui-btn skip-gps-btn" href="#">Skip</a>
+                        <a class="ui-btn skip-gps-btn" href="#potrait-home">Skip</a>
                     </div>
                 </div>
 
@@ -257,6 +261,364 @@
                 <div class="register-div forget-password-reset">
                     <a href="#" data-transition="slide" class="ui-btn login-btn" >Reset Password</a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- potrait home -->
+    <div data-role="page" id="potrait-home" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>Hi Pasindu,</h1>
+                <p>Time to grab a meal</p>
+            </div>
+            <div  class="home-search-input">
+                <input class="mb-0" type="text" placeholder="  &#xf002;   Contact Number" style="font-family:Arial, FontAwesome" />
+            </div>
+        </div>
+        <div class="rounded-icons-group">
+            <div class="rounded-icon">
+                <img class="fast-food" src="images/rounded-icons/fast-food.png"></img>
+                <p class="rounded-icon-fd-name">Fast food</p>
+            </div>
+            
+            <div class="rounded-icon">
+                <img class="rounded-icon-img" src="images/rounded-icons/pizza.png"></img>
+                <p class="rounded-icon-name">Pizza</p>
+            </div>
+            <div class="rounded-icon">
+                <img class="rounded-icon-img" src="images/rounded-icons/chinese.png"></img>
+                <p class="rounded-icon-chinese-name">Chinese</p>
+            </div>
+            <div class="rounded-icon">
+                <img class="rounded-icon-img" src="images/rounded-icons/more.png"></img>
+                <p class="rounded-icon-name">More</p>
+            </div>
+        </div>
+        <div class="food-items-list-header">
+            <h3>Food Menu</h3>
+            <a href="#">Check all</a>
+        </div>
+        <div class="food-item-list" id="food-item-list">
+           
+        </div>
+        <div class="favorite-items-list-header">
+            <h3>Favorite List</h3>
+            <a href="#favorite-page">Check all</a>
+        </div>
+        <div class="favorite-item-list" id="favFoodList">
+           
+        </div>
+    </div>
+
+    <!-- favorite page -->
+    <div data-role="page" id="favorite-page" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div favorite-welcome">
+                <h1>Favorite List</h1>
+                <p>Here is what you love</p>
+                <a href="#cart">cart</a>
+            </div>
+        </div>
+        <div class="food-item-list-no-scroll ui-grid-b" id="favFoodItemsPage">
+            <div class="favorite-item-card ui-block-b">
+                <div class="favorite-div" >
+                    <span class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/sea-food.png" />
+                    <h5>Sea food</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 600.00
+                    </h4>
+                </div>
+            </div>
+            
+            <div class="favorite-item-card ui-block-b">
+                <div class="favorite-div" >
+                    <span class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/sea-food.png" />
+                    <h5>Sea food</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 600.00
+                    </h4>
+                </div>
+            </div>
+            <div class="favorite-item-card ui-block-b">
+                <div class="favorite-div" >
+                    <span class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/sea-food.png" />
+                    <h5>Sea food</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 600.00
+                    </h4>
+                </div>
+            </div>
+            <div class="favorite-item-card ui-block-b">
+                <div class="favorite-div" >
+                    <span class="iconify delete-icon" data-icon="fluent:delete-24-regular" style="color: #f24e1e;" data-width="20" data-height="20"></span>
+                </div>
+                <div>
+                    <img src="./images/food-images/sea-food.png" />
+                    <h5>Sea food</h5>
+                    <p>
+                        Dictum tortor nunc nibh egestas
+                    </p>
+                    <h4>
+                        Rs. 600.00
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button onclick="handleSendEmail()" class="ui-btn send-email">
+                <span class="iconify send-email-icon" data-icon="bi:send" style="color: white;" data-width="34" data-height="34"></span>
+                <p>
+                    Send as email
+                </p>
+            </button>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+    
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span onclick="handleCloseSpan()" class="iconify close" data-icon="ant-design:close-outlined" style="color: #f24e1e;" data-width="24" data-height="24"></span>
+                    <h4>Send Favorites As Email</h4>
+                </div>
+                <div class="modal-body">
+                    <div >
+                        <input id="favEmailReceipt" class="mb-0" type="email" placeholder="  &#xf0e0;   Email Address" style="font-family:Arial, FontAwesome"  required/>
+                        <div id="favEmailErrorMsg">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="sendEmail()" class="ui-btn confirm-and-send">
+                        <p>
+                            Confirm & send
+                        </p>
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    // email-confirmation
+    <div data-role="page" id="email-confirmation" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>Email Sent</h1>
+            </div>
+            <div class="email-sent">
+                <img src="images/background/email-sent.png" />
+            </div>
+            <div class="email-sent-content">
+                <h2>Your email has successfully <br/> sent</h2>
+            </div>
+            <div class="email-sent-content">
+               <a class="ui-btn back-to-home" href="#potrait-home" >
+                    <p>
+                        Back To Home
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    // cart
+    <div data-role="page" id="cart" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>My Cart</h1>
+            </div>
+            <div class="cart-item-list" id="cardItemList">
+                <div class="col" id="cardItemListCol1">
+                    
+                </div>
+                <div class="col" id="cardItemListCol2">
+
+                </div>
+            </div>
+            <div class="cart-checkout">
+                <table class="checkout-table">
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td>TAX</td>
+                        <td id="tax"></td>
+                    </tr>
+                    <tr>
+                        <td>Delievery</td>
+                        <td>LKR 50</td>
+                    </tr> 
+                    <tr>
+
+                        <td><hr></td>
+                        <td><hr></td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Total</td>
+                        <td id="total"></td>
+                    </tr>
+                </table>
+                <div class="cart-checkout-btn-div">
+                        <a href="#checkout" data-transition="slide" class="ui-btn cart-checkout-btn" >Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="checkout" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>Checkout</h1>
+            </div>
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Coupon code</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Coupon code" style="font-family:Arial, FontAwesome" />
+                </div>
+            </div>
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Payment method</h3>
+                </div>
+                <div id="checkoutValue">
+                </div>
+            </div>
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Address</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Billing Address" style="font-family:Arial, FontAwesome" />
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Delievery Address" style="font-family:Arial, FontAwesome" />
+                </div>
+            </div> 
+            <div class="coupon-code">
+                <div class="checkout-sub-heaers">
+                    <h3>Delievery Note</h3>
+                </div>
+                <div>
+                    <input class="mb-0" type="text" placeholder="Enter your note" style="font-family:Arial, FontAwesome" />
+                </div>
+                <div class="cart-checkout-btn-div">
+                    <a href="#" id="checkoutAndPay" data-transition="slide" class="ui-btn cart-checkout-btn mt-cp" >Confirm And Pay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    // email-confirmation
+    <div data-role="page" id="order-confirmation" class="home-background">
+        <div data-role="header" data-position="fixed" class="ui-grid-a home-header">
+            <div>
+                <img class="potrait-home-logo" src="./images/logo/Food Centric-logos_transparent.png" />
+                <span class="iconify hambuger-icon" data-icon="dashicons:menu" style="color: white;" data-width="50" data-height="50"></span>
+                <span class="iconify qr-icon" data-icon="bi:qr-code-scan" style="color: white;" data-width="35" data-height="35"></span>
+            </div>
+            <div class="ui-block-b center">
+                <p class="header-block-two">
+                </p>
+            </div>
+        </div>
+        <div data-role="main" class="home-main">
+            <div class="home-welcome-div">
+                <h1>Order Confirmation</h1>
+            </div>
+            <div class="email-sent">
+                <img src="images/background/order-confirmation.png" />
+            </div>
+            <div class="email-sent-content">
+                <h2>Your order is confirmed! <br/><p style="font-size:16px"> Order Number: #9464365</p>
+                    <br/>
+                    <p style="font-size:16px"> Your earned coupon points for this order!</p>
+                    <p style="font-size:16px"> Please check your goals page</p>
+                </h2>
+            </div>
+            <div class="email-sent-content">
+               <a class="ui-btn back-to-home" style="margin: 0 !important;" href="#potrait-home" >
+                        Back To Home
+                </a>
             </div>
         </div>
     </div>
